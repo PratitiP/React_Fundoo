@@ -1,0 +1,3 @@
+#ignore entire folder
+/node_modules/
+/dist/
