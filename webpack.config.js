@@ -40,5 +40,15 @@ module.exports = {
 
     //   "mode" we want it to run in - "production" or "development". 
     //    development mode will enable things like tooling for debugging and faster builds.
-    mode: "development"
+    mode: "development",
+
+    // configuring Webpack server to expect the routes.
+    // The historyApiFallback is what fixed this issue for routing on both server and client side. 
+    // Routing works correctly and can refresh the page or type in the URL directly. 
+    // No need to worry about work arounds on your server.
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
+     }
 }
